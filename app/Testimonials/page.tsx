@@ -3,6 +3,9 @@
 import HeroNavbar from "@/components/HeroNavba";
 import { ChevronLeft, ChevronRight, Quote } from "lucide-react";
 import { useState } from "react";
+import Image from "next/image";
+import { assets } from "@/public/assets/asset";
+
 
 const testimonials = [
   {
@@ -10,32 +13,31 @@ const testimonials = [
       "Pedro is one of the most talented engineers I've worked with. His attention to detail and ability to translate complex requirements into elegant solutions is remarkable.",
     author: "Sarah Chen",
     role: "CTO, Tech Innovators Inc.",
-    avatar:
-      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop",
+     image: assets.pic1,
   },
   {
     quote:
       "Working with Pedro was a game-changer for our project. He delivered ahead of schedule with code quality that set a new standard for our team.",
     author: "Michael Rodriguez",
     role: "Product Manager, Digital Solutions",
-    avatar:
-      "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop",
+   image:
+      assets.pic2,
   },
   {
     quote:
       "Pedro's expertise in React and TypeScript helped us rebuild our entire frontend in record time. His architectural decisions continue to pay dividends.",
     author: "Emily Watson",
     role: "Engineering Lead, StartUp Labs",
-    avatar:
-      "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop",
+    image:
+      assets.pic1,
   },
   {
     quote:
       "Not only is Pedro technically brilliant, but he's also a fantastic communicator and team player. He elevated everyone around him.",
     author: "David Kim",
     role: "CEO, Innovation Hub",
-    avatar:
-      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop",
+    image:
+      assets.pic4,
   },
 ];
 
@@ -92,12 +94,13 @@ const Testimonials = () => {
 
             {/* Author */}
             <div className="flex items-center gap-4 mt-10">
-              <img
-                src={testimonials[activeIdx].avatar}
-                alt={testimonials[activeIdx].author}
-                className="w-14 h-14 rounded-full object-cover border-2 border-cyan-400"
-              />
-
+              <Image
+               src={testimonials[activeIdx].image}
+               alt={testimonials[activeIdx].author}
+                width={56}
+               height={56}
+                className="rounded-full object-cover border-2 border-cyan-400"
+                />
               <div>
                 <h4 className="font-semibold text-lg">
                   {testimonials[activeIdx].author}
