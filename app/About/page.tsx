@@ -2,6 +2,7 @@
 "use client";
 
 import HeroNavbar from "@/components/HeroNavba";
+import Footer from "@/components/Footer";
 import { Code2, Lightbulb, Rocket, Users } from "lucide-react";
 import Link from "next/link";
 
@@ -120,6 +121,7 @@ const About = () => {
         </div>
       </div>
     </section>
+    <Footer />
     </div>
   );
 };

@@ -5,6 +5,7 @@ import { ChevronLeft, ChevronRight, Quote } from "lucide-react";
 import { useState } from "react";
 import Image from "next/image";
 import { assets } from "@/public/assets/asset";
+import Footer from "@/components/Footer";
 
 
 const testimonials = [
@@ -149,6 +150,7 @@ const Testimonials = () => {
         </div>
       </div>
     </section>
+    <Footer/>
         </div>
   );
 };

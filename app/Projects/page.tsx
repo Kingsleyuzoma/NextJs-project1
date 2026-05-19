@@ -2,7 +2,10 @@
 
 "use client";
 import HeroNavbar from "@/components/HeroNavba";
+import Footer from "@/components/Footer";
 import { ArrowUpRight,  } from "lucide-react";
+import Image from "next/image";
+import { assets } from "@/public/assets/asset";
 
 
 const projects = [
@@ -10,7 +13,7 @@ const projects = [
     title: "Fintech Dashboard",
     description:
       "A comprehensive financial analytics platform with real-time data visualization, portfolio management, and AI-powered insights.",
-    image: "/projects/project1.png",
+    image:assets.fintech,
     tags: ["React", "TypeScript", "NodeJS"],
     link: "#",
     github: "#",
@@ -19,7 +22,7 @@ const projects = [
     title: "E-Commerce Platform",
     description:
       "A full-featured e-commerce solution with inventory management, payment processing, and analytics dashboard.",
-    image: "/projects/project2.png",
+    image: assets.ecommerce,
     tags: ["Next.js", "Stripe", "PostgreSQL", "Tailwind"],
     link: "#",
     github: "#",
@@ -28,7 +31,7 @@ const projects = [
     title: "AI Writing Assistant",
     description:
       "An intelligent writing tool powered by GPT-4, helping users create better content faster.",
-    image: "/projects/project3.png",
+    image: assets.aiwritting,
     tags: ["React", "OpenAI", "Python", "FastAPI"],
     link: "#",
     github: "#",
@@ -37,7 +40,7 @@ const projects = [
     title: "Project Management Tool",
     description:
       "A collaborative workspace for teams with real-time updates, task tracking, and integrations.",
-    image: "/projects/project4.png",
+    image: assets.management,
     tags: ["Next.js", "Socket.io", "MongoDB", "Redis"],
     link: "#",
     github: "#",
@@ -85,10 +88,13 @@ const Projects = () => {
             >
               {/* Project Image */}
               <div className="relative overflow-hidden aspect-video">
-                <img
+                <Image
                   src={project.image}
                   alt={project.title}
+               width={900}
+               height={900}
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                    priority
                 />
 
                 {/* Dark Overlay */}
@@ -153,6 +159,7 @@ const Projects = () => {
         </div>
       </div>
     </section>
+    <Footer />
     </div>
   );
 };

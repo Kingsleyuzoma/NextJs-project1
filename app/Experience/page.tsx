@@ -1,6 +1,7 @@
 
 "use client";
 import HeroNavbar from "@/components/HeroNavba";
+import Footer from "@/components/Footer";
 
 const experiences = [
   {
@@ -139,8 +140,10 @@ const Experience = () => {
         </div>
       </div>
     </section>
+    <Footer />
     </div>
   );
 };
+ 
 
 export default Experience;
