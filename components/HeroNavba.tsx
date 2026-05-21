@@ -10,6 +10,7 @@ const navLinks = [
   { href: "/Projects", label: "Projects" },
   { href: "/Experience", label: "Experience" },
   { href: "/Testimonials", label: "Testimonials" },
+  { href: "/Contact", label: "Contact" },
 ];
 
 const HeroNavbar = () => {
@@ -63,9 +64,11 @@ const HeroNavbar = () => {
 
           {/* Desktop CTA */}
           <div className="hidden md:block">
+            <Link href="/Contact">
             <button className="bg-cyan-400 hover:bg-cyan-300 text-black px-5 py-2 rounded-full font-semibold transition duration-300">
               Contact Me
             </button>
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
@@ -96,9 +99,11 @@ const HeroNavbar = () => {
                 </a>
               ))}
 
-              <button className="bg-cyan-400 hover:bg-cyan-300 text-black px-5 py-3 rounded-full font-semibold transition duration-300">
-                Contact Me
-              </button>
+              <Link href="/Contact">
+                <button className="bg-cyan-400 hover:bg-cyan-300 text-black px-5 py-3 rounded-full font-semibold transition duration-300">
+                  Contact Me
+                </button>
+              </Link>
             </div>
           </div>
         )}
